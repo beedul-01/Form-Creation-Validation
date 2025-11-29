@@ -12,30 +12,30 @@ document.addEventListener("DOMContentLoaded", function () {
         const  email = emailinput.value.trim();
         const password = passwordinput.value.trim();
 
-        let isvalid = true;
+        let isValid = true;
         let messages = [];
 
         if (username.length < 3) {
-            let isvalid = false;
+            let isValid = false;
             messages.push("User name's too short");
         }
 
 
         if (!email.includes ('@') || !email.includes ('.')) {
-            let isvalid = false;
+            let isValid = false;
             messages.push("Invalid email address")
         }
   
         
         if (password.length < 8) {
-            let isvalid = false;
+            let isValid = false;
             messages.push('You need a stronger password of at least 8 characters')
         }
 
         feedbackDiv.style.display = 'block';
 
 
-        if (isvalid){
+        if (isValid){
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = '#28a745';
         }
