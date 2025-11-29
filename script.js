@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             feedbackDiv.style.color = '#28a745';
         }
         else {
-            feedbackDiv.textContent = messages.join("<br>");
-            feedbackDiv.style.color = '"#dc3545"' ;
+            feedbackDiv.innerHTML = messages.join("<br>");
+            feedbackDiv.style.color = "#dc3545" ;
         }
 
 
