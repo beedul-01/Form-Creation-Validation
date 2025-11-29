@@ -34,13 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         feedbackDiv.style.display = 'block';
 
-        if (!isvalid){
-            feedbackDiv.textContent = messages.join("<br>");
-            feedbackDiv.style.color = '"#dc3545"' ;
-        }
-        else {
+
+        if (isvalid){
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = '#28a745';
+        }
+        else {
+            feedbackDiv.textContent = messages.join("<br>");
+            feedbackDiv.style.color = '"#dc3545"' ;
         }
 
 
